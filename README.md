@@ -14,7 +14,7 @@ Run the container as follows:
 ```
 $ podman run -d --rm --name tor \
   -e TAILSCALE_AUTH_KEY=tsnet... \
-  ghcr.io/spotsnel/torscale:latest
+  ghcr.io/idoodler/private-onion-router:latest
 ```
 
 and use 

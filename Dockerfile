@@ -1,7 +1,12 @@
+ARG TSVERSION=1.40.1
+ARG TSFILE=tailscale_${TSVERSION}_amd64.tgz
+
 FROM alpine:latest as build
+ARG TSFILE
 WORKDIR /app
 
-RUN curl -fsSL https://tailscale.com/install.sh | sh
+RUN wget https://pkgs.tailscale.com/stable/${TSFILE} && \
+  tar xzf ${TSFILE} --strip-components=1
 
 
 FROM alpine:3.18

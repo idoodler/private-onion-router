@@ -10,8 +10,8 @@ if [ ! -S /var/run/tailscale/tailscaled.sock ]; then
 fi
 
 until /app/tailscale up \
-    --login-server=${TAILSCALE_LOGIN_SERVER} \
-    --authkey=${TAILSCALE_AUTH_KEY} \
+    --login-server="${TAILSCALE_LOGIN_SERVER}" \
+    --authkey="${TAILSCALE_AUTH_KEY}" \
     --hostname=tor \
     --ssh
 do

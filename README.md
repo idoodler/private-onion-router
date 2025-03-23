@@ -28,3 +28,10 @@ and use eg. `100.123.45.67:9050` as the address of a SOCKS5 proxy in your browse
 Note: due to the limitations of webkit/chrome, you can not route DNS requests over
 SOCKS5 unless you start the browser explicitly with this proxy. I would suggest
 using Firefox with the FoxyProxy or SwitchyOmega extension.
+
+## ENVs
+
+| ENV                    | Required |
+|------------------------|----------|
+| TAILSCALE_AUTH_KEY     | Yes      |
+| TAILSCALE_LOGIN_SERVER | No       |
